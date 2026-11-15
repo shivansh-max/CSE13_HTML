@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Assignment 8: Hyperlinks and Images with Attributes</title>
+    <style>
+        body {
+            font: 18px Georgia, serif;
+            line-height: 1.5;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            color: #202536
+        }
+
+        a {
+            color: #174b9b
+        }
+
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid orange
+        }
+
+        .block {
+            background: lightblue;
+            margin: 4px
+        }
+
+        .inline {
+            background: lightgreen
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            background: #333;
+            padding: 1rem;
+            list-style: none
+        }
+
+        .nav a {
+            color: white
+        }
+
+        .skip {
+            position: absolute;
+            left: -9999px
+        }
+
+        .skip:focus {
+            left: 1rem;
+            background: white
+        }
+
+        .field {
+            display: grid;
+            margin: 1rem 0;
+            max-width: 30rem
+        }
+
+        input,
+        textarea,
+        select,
+        button {
+            font: inherit;
+            padding: .3rem
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 1rem 0
+        }
+
+        caption {
+            font-weight: bold
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: .4rem
+        }
+
+        th {
+            background: #e9ebf4
+        }
+
+        .scroll {
+            overflow: auto
+        }
+
+        .scroll table {
+            min-width: 600px
+        }
+
+        fieldset {
+            margin: 1rem 0;
+            padding: 1rem
+        }
+
+        .hero,
+        footer {
+            background: #1e2a78;
+            color: white;
+            text-align: center;
+            padding: 1rem
+        }
+
+        @media(max-width:600px) {
+            body {
+                padding: .7rem
+            }
+
+            img,
+            video,
+            iframe {
+                max-width: 100%;
+                height: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="top">Links demo</h1>
+    <p><a href="https://example.com" target="_blank" rel="noopener noreferrer">External link</a></p>
+    <p><a href="#bottom">Jump to bottom</a></p>
+    <p><a href="mailto:admissions@example.edu">Email us</a></p><a href="https://example.com"><img src="assets/logo.svg"
+            alt="ABC College logo placeholder" width="120"></a>
+    <p id="bottom">Bottom. <a href="#top">Back to top</a></p>
+</body>
+
+</html>

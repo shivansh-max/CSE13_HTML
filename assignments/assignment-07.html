@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Assignment 7: Navigation Menu Using Lists</title>
+    <style>
+        body {
+            font: 18px Georgia, serif;
+            line-height: 1.5;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            color: #202536
+        }
+
+        a {
+            color: #174b9b
+        }
+
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid orange
+        }
+
+        .block {
+            background: lightblue;
+            margin: 4px
+        }
+
+        .inline {
+            background: lightgreen
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            background: #333;
+            padding: 1rem;
+            list-style: none
+        }
+
+        .nav a {
+            color: white
+        }
+
+        .skip {
+            position: absolute;
+            left: -9999px
+        }
+
+        .skip:focus {
+            left: 1rem;
+            background: white
+        }
+
+        .field {
+            display: grid;
+            margin: 1rem 0;
+            max-width: 30rem
+        }
+
+        input,
+        textarea,
+        select,
+        button {
+            font: inherit;
+            padding: .3rem
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 1rem 0
+        }
+
+        caption {
+            font-weight: bold
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: .4rem
+        }
+
+        th {
+            background: #e9ebf4
+        }
+
+        .scroll {
+            overflow: auto
+        }
+
+        .scroll table {
+            min-width: 600px
+        }
+
+        fieldset {
+            margin: 1rem 0;
+            padding: 1rem
+        }
+
+        .hero,
+        footer {
+            background: #1e2a78;
+            color: white;
+            text-align: center;
+            padding: 1rem
+        }
+
+        @media(max-width:600px) {
+            body {
+                padding: .7rem
+            }
+
+            img,
+            video,
+            iframe {
+                max-width: 100%;
+                height: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav aria-label="Main">
+        <ul class="nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <h1 id="home">College Portal</h1>
+    <p id="about">About</p>
+    <p id="courses">Courses</p>
+    <p id="contact">Contact</p>
+</body>
+
+</html>

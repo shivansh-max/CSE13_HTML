@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Assignment 18: Mini Project: Accessible Student Admission Page</title>
+    <style>
+        body {
+            font: 18px Georgia, serif;
+            line-height: 1.5;
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            color: #202536
+        }
+
+        a {
+            color: #174b9b
+        }
+
+        a:focus,
+        button:focus,
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: 3px solid orange
+        }
+
+        .block {
+            background: lightblue;
+            margin: 4px
+        }
+
+        .inline {
+            background: lightgreen
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            background: #333;
+            padding: 1rem;
+            list-style: none
+        }
+
+        .nav a {
+            color: white
+        }
+
+        .skip {
+            position: absolute;
+            left: -9999px
+        }
+
+        .skip:focus {
+            left: 1rem;
+            background: white
+        }
+
+        .field {
+            display: grid;
+            margin: 1rem 0;
+            max-width: 30rem
+        }
+
+        input,
+        textarea,
+        select,
+        button {
+            font: inherit;
+            padding: .3rem
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 1rem 0
+        }
+
+        caption {
+            font-weight: bold
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: .4rem
+        }
+
+        th {
+            background: #e9ebf4
+        }
+
+        .scroll {
+            overflow: auto
+        }
+
+        .scroll table {
+            min-width: 600px
+        }
+
+        fieldset {
+            margin: 1rem 0;
+            padding: 1rem
+        }
+
+        .hero,
+        footer {
+            background: #1e2a78;
+            color: white;
+            text-align: center;
+            padding: 1rem
+        }
+
+        @media(max-width:600px) {
+            body {
+                padding: .7rem
+            }
+
+            img,
+            video,
+            iframe {
+                max-width: 100%;
+                height: auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hero">
+        <h1>ABC College Admission 2026</h1>
+    </header>
+    <main>
+        <h2>Courses and Fees</h2>
+        <table>
+            <caption>Available Courses</caption>
+            <tr>
+                <th>Course</th>
+                <th>Seats</th>
+                <th>Fees</th>
+            </tr>
+            <tr>
+                <th>B.Tech CSE</th>
+                <td>120</td>
+                <td>Rs 90,000</td>
+            </tr>
+            <tr>
+                <th>BCA</th>
+                <td>60</td>
+                <td>Rs 45,000</td>
+            </tr>
+        </table>
+        <form>
+            <fieldset>
+                <legend>Application Form</legend>
+                <div class="field"><label for="an">Name:</label><input id="an" required minlength="2"></div>
+                <div class="field"><label for="ae">Email:</label><input id="ae" type="email" required></div>
+                <div class="field"><label for="ac">Course:</label><select id="ac">
+                        <option>B.Tech CSE</option>
+                        <option>BCA</option>
+                    </select></div>
+                <div class="field"><label for="st">Statement:</label><textarea id="st" required></textarea></div>
+                <button>Apply</button>
+            </fieldset>
+        </form>
+    </main>
+    <footer>Copyright 2026 ABC College</footer>
+</body>
+
+</html>
